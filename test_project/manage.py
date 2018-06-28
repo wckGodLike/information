@@ -1,3 +1,4 @@
+# coding:utf-8
 from flask import Flask
 
 app = Flask(__name__）
@@ -6,8 +7,10 @@ app = Flask(__name__）
 def index():
 	return 'index page'
 
-a = 0
-c = 1
+
+@app.route('/user',methods =['POST','GET'])
+def user():
+	return 'user page'
 
 if __name__ == '__main__':
 	app.run()
